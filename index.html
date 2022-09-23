@@ -14,16 +14,20 @@
         <div class="banner" role="banner">
             <h1>To-Do List</h1>
         </div>
-        <form id="form">
+        <form id="todo-form">
             <p>Crie sua meta</p>
+            <div class="control-form">
             <input type="text" id="textInput">
             <button><ion-icon class="BtAdd" name="add-circle"></ion-icon></button>
+            </div>
         </form>
-        <form id="edit-form">
+        <form id="edit-form" class="hide">
             <p>Editar</p>
+            <div class="control-form">
             <input type="text" id="editInput">
             <button><ion-icon class="BtEdit" name="pencil"></ion-icon></button>
-            <button><ion-icon class="Cancel" name="exit"></ion-icon></button>
+            <button><ion-icon class="BtCancel" name="exit"></ion-icon></button>
+            </div>
         </form>
         <div id="toolbar">
             <div id="search">
@@ -33,8 +37,8 @@
                     <button><ion-icon class="BtSearch" name="search-circle"></ion-icon></button> 
                 </form>
             </div>
-        </div>
-        <div id="filter">
+        
+         <div id="filter">
             <p>Filtrar:</p>
             <input list="filtros">
             <datalist id="filtros">
@@ -42,15 +46,17 @@
                 <option value="done">Terminadas</option>
                 <option value="working">Em progresso</option>
             </datalist>
+         </div>
         </div>
         <div id="lista">
-            <div class="lista_task">
-                <p>To-do List</p>
+            <div class="lista_task done">
+                <p>vapormax</p>
                 <button><ion-icon class="done_task" name="checkmark-circle"></ion-icon></button>
                 <button><ion-icon class="edit_task" name="pencil"></ion-icon></button>
                 <button><ion-icon class="remove_task" name="trash"></ion-icon></button>
             </div>
         </div>
+        
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

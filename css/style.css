@@ -1,8 +1,9 @@
 *{
     padding: 0%;
     margin: 0%;
-    font-family: 'Times New Roman', Times, serif;
-    color: #333;
+    font-family: 'Times New Roman';
+    color: black;
+    font-weight: bold;
     box-sizing: border-box;
 }
 
@@ -11,6 +12,9 @@ body{
     background-position: center;
 }
 
+.hide{
+    display: none;
+}
 button{
     background-color: white;
     color: blue;
@@ -32,7 +36,7 @@ button .ion-icon{
 }
 
 input{
-    padding: 1px 12px;
+    padding: 1px 8px 1px 1px;
 }
 
 .to-do{
@@ -41,11 +45,104 @@ input{
     padding: 1.5rem;
     border: .4rem solid black;
     border-radius: 20px;
+    background-image: url("https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
+    background-size: 100%;
 }
 
 .to-do .banner{
     text-align: center;
     padding: 0 1rem 1rem;
-    border-bottom: 4px solid;
+    border-bottom: 2px solid;
 } 
+.to-do h1{
+    background-color: yellowgreen;
+}
 
+#todo-form, #edit-form{
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+}
+
+#todo-form p, #edit-form p{
+    font-weight:bold;
+    margin-bottom: 0.5rem;
+}
+
+.control-form{
+    display: flex;
+}
+
+.control-form input{
+    margin-right: 0.3rem;
+}
+
+.BtCancel{
+    margin-top: 1rem;
+}
+
+#toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+#toolbar p{
+    margin-bottom: .5rem;
+}
+
+.search{
+    border-right: 1px solid #DDD;
+    padding-right: 1rem;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form{
+    display: flex;
+}
+
+#search input{
+    width: 100%;
+    margin-right: .2rem;
+}
+
+#filter{
+    display: flex;
+    width: 35%;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+#filter input{
+    padding: 1%;
+    width: 122%;
+}
+
+.lista_task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #DDD;
+    transition: 0.3s;
+    margin-left: .9rem;
+    margin-top: .5rem;
+}
+
+.lista_task p{
+    flex: 1;
+    font-size: 1.2em;
+}
+
+.lista_task button{
+    margin-left: .2rem;
+}
+
+.done{
+    background-color: rgb(38, 0, 255);
+}
+
+.done p{
+    text-decoration: line-through;
+}
