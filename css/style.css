@@ -11,9 +11,8 @@ body{
     background-image: url("../images/images.png");
     background-position: center;
 }
-
 .hide{
-
+    display: none;
 }
 button{
     background-color: white;
@@ -46,7 +45,7 @@ input{
     border: .4rem solid black;
     border-radius: 20px;
     background-image: url("https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80");
-    background-size: 100%;
+    background-size: 400%;
 }
 
 .to-do .banner{
@@ -119,7 +118,7 @@ input{
     width: 122%;
 }
 
-.lista_task{
+.todo{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,17 +129,17 @@ input{
     margin-top: .5rem;
 }
 
-.lista_task p{
+.todo p{
     flex: 1;
     font-size: 1.2em;
 }
 
-.lista_task button{
+.todo button{
     margin-left: .2rem;
 }
 
 .done{
-    background-color: rgb(38, 0, 255);
+    background-color: lawngreen;
 }
 
 .done p{
