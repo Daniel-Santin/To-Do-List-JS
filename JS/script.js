@@ -3,8 +3,8 @@ const todoInput = document.querySelector("#textInput");
 const todolist = document.querySelector("#lista");
 const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#editInput");
-const cancelEdit = document.querySelector("#remove_task");
-
+const cancelEditBtn = document.querySelector("#BtCancel");
+const tollbar = document.querySelector("#troolbar");
 let oldValue;
 
 //funções
@@ -43,10 +43,11 @@ const toggleForms = () =>{
     editForm.classList.toggle("hide");
     todoForm.classList.toggle("hide");
     todolist.classList.toggle("hide");
+    tollbar.classList.toggle("hide");
 }
 
 const updateTodo = (text) => {
-    const alltodo = document.querySelectorAll("todo");
+    const alltodo = document.querySelectorAll(".todo");
 
     alltodo.forEach((todo) => {
         let todoTitle = todo.querySelector("p");
@@ -76,34 +77,35 @@ document.addEventListener("click", (e) => {
 
     
     if(AcessTask && AcessTask.querySelector("p")){
-        todoTitle = AcessTask.querySelector("p").innerText;
-
+        todoTitle = AcessTask.querySelector("p").innerText || "";
     }
 
     if(BtClick.classList.contains("done_task")){
         AcessTask.classList.toggle("done");
-    }
-
-    if(BtClick.classList.contains("remove_task")){
-        e.preventDefault();
-       AcessTask.remove();
+        console.log("vapor1");
     }
 
     if(BtClick.classList.contains("edit_task")){
         e.preventDefault();
+        console.log("vapor4");
         toggleForms();
 
         editInput.value = todoTitle;
+        oldValue = todoTitle;
+    }
 
-     }
+    if(BtClick.classList.contains("remove_task")){
+        e.preventDefault();
+        AcessTask.remove();
+        console.log("vapor3");
+    }
 
 });
 
-cancelEdit.addEventListener("click", (e) =>{
- e.preventDefault();
-
- toggleForms();
-});
+cancelEditBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    toggleForms();
+  });
 
 editForm.addEventListener("submit", (e) => {
     e.preventDefault();

@@ -79,13 +79,13 @@ input{
     margin-top: 1rem;
 }
 
-#toolbar{
+#troolbar{
     padding: 1rem;
     border-bottom: 1px solid #ccc;
     display: flex;
 }
 
-#toolbar p{
+#troolbar p{
     margin-bottom: .5rem;
 }
 

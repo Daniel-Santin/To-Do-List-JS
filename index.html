@@ -25,11 +25,11 @@
             <p>Editar</p>
             <div class="control-form">
                 <input type="text" id="editInput">
-                <button type="submit"><ion-icon class="BtEdit" name="pencil"></ion-icon></button>
-                <button type="submit"><ion-icon class="BtCancel" name="exit"></ion-icon></button>
+                <button type="submit"><ion-icon name="pencil"></ion-icon></button>
+                <button id="BtCancel"><ion-icon name="exit"></ion-icon></button>
             </div>
         </form>
-        <div id="toolbar">
+        <div id="troolbar">
             <div id="search">
                 <p>Pesquisar meta:</p>
                 <form>
@@ -37,7 +37,6 @@
                     <button type="submit"><ion-icon class="BtSearch" name="search-circle"></ion-icon></button> 
                 </form>
             </div>
-        
             <div id="filter">
                 <p>Filtrar:</p>
                 <input list="filtros">
@@ -49,12 +48,14 @@
             </div>
         </div>
         <div id="lista">
+            <!--
             <div class="todo done">
                 <p>vapormax</p>
-                <button id="done_task" ><ion-icon name="checkmark-circle"></ion-icon></button>
-                <button id="edit_task"><ion-icon name="pencil"></ion-icon></button>
+                <button class="done_task" ><ion-icon name="checkmark-circle"></ion-icon></button>
+                <button class="edit_task"><ion-icon name="pencil"></ion-icon></button>
                 <button id="remove_task"><ion-icon name="trash"></ion-icon></button>
             </div>
+            -->
         </div>
 
     </div>
